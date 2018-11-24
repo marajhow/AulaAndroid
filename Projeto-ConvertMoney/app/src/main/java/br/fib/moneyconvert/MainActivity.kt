@@ -1,5 +1,6 @@
 package br.fib.moneyconvert
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         var btnPeso: Button = btnPeso
         btnPeso.setOnClickListener(this)
+
     }
 
 
@@ -42,41 +44,48 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         var valor: Double = 0.0
 
+        var conversao: Double =  0.0
+
         if(button?.id == btnDolar.id){
             valor = campoValor!!.text.toString().toDouble()
-            var dolar: Double = 3.83 * valor
-            txtResultado.setText("O valor do dolar é: R$" + dolar)
+            conversao = 3.83 * valor
+
+            //txtResultado.setText("O valor do dolar é: R$" + dolar)
         }
 
         else if(button?.id == btnEuro.id){
             valor  = campoValor!!.text.toString().toDouble()
-            var euro: Double = 4.34 * valor
-            txtResultado.setText("O valor do euro é: R$" + euro)
+            conversao = 4.34 * valor
+            //txtResultado.setText("O valor do euro é: R$" + euro)
         }
 
         else if(button?.id == btnRupia.id){
             valor  = campoValor!!.text.toString().toDouble()
-            var rupia: Double = 0.054 * valor
-            txtResultado.setText("O valor do rupia é: R$" + rupia)
+            conversao = 0.054 * valor
+            //txtResultado.setText("O valor do rupia é: R$" + rupia)
         }
 
         else if(button?.id == btnLibra.id){
             valor  = campoValor!!.text.toString().toDouble()
-            var libra: Double = 4.91 * valor
-            txtResultado.setText("O valor do libra é: R$" + libra)
+            conversao = 4.91 * valor
+            //txtResultado.setText("O valor do libra é: R$" + libra)
         }
 
         else if(button?.id == btnFranco.id){
             valor  = campoValor!!.text.toString().toDouble()
-            var franco: Double = 3.84 * valor
-            txtResultado.setText("O valor do franco é: R$" + franco)
+            conversao = 3.84 * valor
+            //txtResultado.setText("O valor do franco é: R$" + franco)
         }
 
         else if(button?.id == btnPeso.id){
             valor  = campoValor!!.text.toString().toDouble()
-            var peso: Double = 0.10 * valor
-            txtResultado.setText("O valor do peso é: R$" + peso)
+            conversao = 0.10 * valor
+            //txtResultado.setText("O valor do peso é: R$" + peso)
         }
+
+        val intent = Intent(this@MainActivity, ResultadoActivity::class.java)
+        intent.putExtra("valorConvertido", conversao)
+        startActivity(intent)
 
 
     }
