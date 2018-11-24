@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/btnRupia"
+        android:layout_width="90dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="36dp"
+        android:text="Rupia"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnLibra"
+        app:layout_constraintEnd_toStartOf="@+id/btnLibra"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPeso"
+        android:layout_width="90dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="46dp"
+        android:text="Peso"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnLibra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnLibra" />
+
+    <Button
+        android:id="@+id/btnLibra"
+        android:layout_width="90dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="44dp"
+        android:text="Libra"
+        app:layout_constraintEnd_toStartOf="@+id/btnPeso"
+        app:layout_constraintStart_toEndOf="@+id/btnRupia"
+        app:layout_constraintTop_toBottomOf="@+id/btnEuro" />
+
+    <EditText
+        android:id="@+id/edtValor"
+        android:layout_width="260dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="valor"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDolar"
+        android:layout_width="90dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="36dp"
+        android:text="Dolar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnEuro"
+        app:layout_constraintEnd_toStartOf="@+id/btnEuro"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnFranco"
+        android:layout_width="90dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="46dp"
+        android:text="Franco"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnEuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEuro" />
+
+    <Button
+        android:id="@+id/btnEuro"
+        android:layout_width="90dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="32dp"
+        android:text="Euro"
+        app:layout_constraintEnd_toStartOf="@+id/btnFranco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDolar"
+        app:layout_constraintTop_toBottomOf="@+id/edtValor" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="teste de texto"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
